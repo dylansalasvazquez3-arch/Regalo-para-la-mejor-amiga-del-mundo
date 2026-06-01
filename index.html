@@ -1,0 +1,290 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños Helen ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+.contenedor{
+    z-index:2;
+    color:white;
+    max-width:800px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.corazon{
+    font-size:120px;
+    animation:latido 1s infinite;
+}
+
+@keyframes latido{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+p{
+    font-size:1.3rem;
+    margin:20px;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff4d6d;
+    font-size:18px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* GALERÍA */
+
+.galeria{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.foto{
+    width:150px;
+    height:150px;
+    border:3px solid white;
+    border-radius:15px;
+    overflow:hidden;
+    background:rgba(255,255,255,.2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+}
+
+/* CONFETI */
+
+.confeti{
+    position:absolute;
+    width:12px;
+    height:12px;
+    animation:caer linear infinite;
+}
+
+@keyframes caer{
+    from{
+        transform:translateY(-100vh) rotate(0deg);
+    }
+    to{
+        transform:translateY(100vh) rotate(720deg);
+    }
+}
+
+/* CORAZONES FLOTANDO */
+
+.flotante{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    animation:subir 6s linear infinite;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+}
+
+/* FUEGOS ARTIFICIALES */
+
+.firework{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:white;
+    animation:explosion 1.5s infinite;
+}
+
+@keyframes explosion{
+    0%{
+        transform:scale(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(15);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MÚSICA -->
+<audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<div class="contenedor">
+
+    <h1>🎂 Feliz Cumpleaños Helen 🎂</h1>
+
+    <div class="corazon">❤️</div>
+
+    <p>
+        Helen, gracias por ser una persona tan especial.
+        Espero que este día esté lleno de felicidad,
+        sonrisas y momentos inolvidables.
+        Te mereces lo mejor del mundo. ✨
+    </p>
+
+    <button onclick="mensaje()">
+        Abrir Sorpresa 🎁
+    </button>
+
+    <!-- AQUÍ VAN LAS FOTOS -->
+
+    <div class="galeria">
+
+        <div class="foto">
+            FOTO 1
+        </div>
+
+        <div class="foto">
+            FOTO 2
+        </div>
+
+        <div class="foto">
+            FOTO 3
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function mensaje(){
+
+    alert(
+`Helen ❤️
+
+Gracias por ser una persona increíble.
+
+Espero que tengas un cumpleaños lleno de felicidad, risas y momentos hermosos.
+
+Nunca dejes de sonreír. 🎂✨`
+    );
+
+}
+
+/* CONFETI */
+
+const colores=[
+"#ff4d6d",
+"#ffd166",
+"#06d6a0",
+"#118ab2",
+"#8338ec",
+"#ffffff"
+];
+
+for(let i=0;i<100;i++){
+
+    let c=document.createElement("div");
+
+    c.classList.add("confeti");
+
+    c.style.left=Math.random()*100+"vw";
+
+    c.style.background=
+    colores[Math.floor(Math.random()*colores.length)];
+
+    c.style.animationDuration=
+    (Math.random()*4+2)+"s";
+
+    document.body.appendChild(c);
+}
+
+/* CORAZONES */
+
+for(let i=0;i<25;i++){
+
+    let h=document.createElement("div");
+
+    h.classList.add("flotante");
+
+    h.innerHTML="❤️";
+
+    h.style.left=Math.random()*100+"vw";
+
+    h.style.animationDuration=
+    (Math.random()*4+4)+"s";
+
+    h.style.fontSize=
+    (Math.random()*25+15)+"px";
+
+    document.body.appendChild(h);
+}
+
+/* FUEGOS ARTIFICIALES */
+
+for(let i=0;i<12;i++){
+
+    let f=document.createElement("div");
+
+    f.classList.add("firework");
+
+    f.style.left=Math.random()*100+"vw";
+
+    f.style.top=Math.random()*100+"vh";
+
+    f.style.animationDelay=
+    Math.random()*2+"s";
+
+    document.body.appendChild(f);
+}
+
+</script>
+
+</body>
+</html>
+```
