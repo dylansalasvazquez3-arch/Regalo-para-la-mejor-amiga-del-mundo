@@ -1,13 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Cumpleaños Helen ❤️</title>
+<title>Feliz Cumpleaños Helen 💐</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,41 +13,55 @@
 }
 
 body{
-    height:100vh;
-    overflow:hidden;
+    min-height:100vh;
+    overflow-x:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     font-family:Arial, sans-serif;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    background:linear-gradient(135deg,#ff4d6d,#ff758f,#ffb3c1);
+    position:relative;
 }
 
 .contenedor{
-    z-index:2;
+    position:relative;
+    z-index:100;
     color:white;
-    max-width:800px;
+    width:90%;
+    max-width:850px;
+    margin:auto;
 }
 
 h1{
     font-size:3rem;
     margin-bottom:15px;
+    text-shadow:0 0 15px rgba(255,255,255,.8);
 }
 
 .corazon{
-    font-size:120px;
-    animation:latido 1s infinite;
+    font-size:170px;
+    animation:latido 1.5s infinite;
+    filter:drop-shadow(0 0 20px rgba(255,255,255,.8));
 }
 
 @keyframes latido{
     0%{transform:scale(1);}
-    50%{transform:scale(1.2);}
+    50%{transform:scale(1.12);}
     100%{transform:scale(1);}
 }
 
-p{
-    font-size:1.3rem;
-    margin:20px;
+.mensaje{
+    max-width:700px;
+    margin:20px auto;
+    padding:25px;
+    font-size:1.2rem;
+    line-height:1.8;
+    text-align:center;
+    background:rgba(255,255,255,0.20);
+    border-radius:20px;
+    backdrop-filter:blur(8px);
+    box-shadow:0 0 25px rgba(255,255,255,.3);
 }
 
 button{
@@ -61,76 +73,39 @@ button{
     font-size:18px;
     cursor:pointer;
     margin-top:15px;
+    transition:.3s;
+    font-weight:bold;
 }
 
 button:hover{
     transform:scale(1.05);
 }
 
-/* GALERÍA */
-
-.galeria{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
-
-.foto{
-    width:150px;
-    height:150px;
-    border:3px solid white;
-    border-radius:15px;
-    overflow:hidden;
-    background:rgba(255,255,255,.2);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-weight:bold;
-}
-
-/* CONFETI */
-
 .confeti{
     position:absolute;
     width:12px;
     height:12px;
+    z-index:1;
     animation:caer linear infinite;
 }
 
 @keyframes caer{
-    from{
-        transform:translateY(-100vh) rotate(0deg);
-    }
-    to{
-        transform:translateY(100vh) rotate(720deg);
-    }
+    from{ transform:translateY(-100vh) rotate(0deg); }
+    to{ transform:translateY(100vh) rotate(720deg); }
 }
-
-/* CORAZONES FLOTANDO */
 
 .flotante{
     position:absolute;
     color:white;
     font-size:25px;
+    z-index:1;
     animation:subir 6s linear infinite;
 }
 
 @keyframes subir{
-    from{
-        transform:translateY(100vh);
-        opacity:1;
-    }
-
-    to{
-        transform:translateY(-120vh);
-        opacity:0;
-    }
+    from{ transform:translateY(100vh); opacity:1; }
+    to{ transform:translateY(-120vh); opacity:0; }
 }
-
-/* FUEGOS ARTIFICIALES */
 
 .firework{
     position:absolute;
@@ -138,27 +113,19 @@ button:hover{
     height:6px;
     border-radius:50%;
     background:white;
+    z-index:1;
     animation:explosion 1.5s infinite;
 }
 
 @keyframes explosion{
-    0%{
-        transform:scale(0);
-        opacity:1;
-    }
-
-    100%{
-        transform:scale(15);
-        opacity:0;
-    }
+    0%{ transform:scale(0); opacity:1; }
+    100%{ transform:scale(15); opacity:0; }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- MÚSICA -->
 <audio autoplay loop>
     <source src="musica.mp3" type="audio/mpeg">
 </audio>
@@ -167,134 +134,80 @@ button:hover{
 
     <h1>🎂 Feliz Cumpleaños Helen 🎂</h1>
 
-    <div class="corazon">❤️</div>
+    <div class="corazon">💐</div>
 
-    <p>
-       🎂🎉❤️ Feliz Cumpleaños, Helen 🎂🎉❤️
+<div class="mensaje">
+    🎂🎉❤️ Feliz Cumpleaños, Helen 🎂🎉❤️
+    <br><br>
 
-Espero que te la pases genial en tu día.
+    Espero que te la pases genial en tu día.
+    <br><br>
 
-Realmente te agradezco por ser mi amiga. Eres un sol, porque nunca dejas de iluminar mis días. Gracias a ti, mi cumpleaños fue especial, y de verdad espero poder hacer lo mismo con el tuyo.
+    Realmente te agradezco por ser mi amiga. Eres un sol, porque nunca dejas de iluminar mis días.
+    <br><br>
 
-Sabes que siempre estaré para ti. No importan las adversidades, siempre seré tu mejor amigo. También le doy gracias a Dios por haberme permitido conocer a alguien tan especial como tú.
+    Gracias por todo lo bonito que has hecho por mí y por estar siempre ahí.
+    <br><br>
 
-Espero que disfrutes mucho tu día, que sonrías, que cumplas muchos sueños y que recibas todo el cariño que mereces.
+    Sabes que siempre estaré para ti. No importa lo que pase, siempre podrás contar conmigo.
+    <br><br>
 
-Con cariño,
+    Gracias por cada momento, por cada risa y por tu amistad.
+    <br><br>
 
-Dylan 💝💖💗
+    Disfruta mucho tu día, sonríe, celebra y pásala increíble 🎉🎂
+    <br><br>
 
-    </p>
+    <strong>Con cariño,<br>💝💖Dylan💝💖</strong>
+</div>
 
-    <button onclick="mensaje()">
-        Abrir Sorpresa 🎁
-    </button>
-
-    <!-- AQUÍ VAN LAS FOTOS -->
-
-    <div class="galeria">
-
-        <div class="foto">
-            FOTO 1
-        </div>
-
-        <div class="foto">
-            FOTO 2
-        </div>
-
-        <div class="foto">
-            FOTO 3
-        </div>
-
-    </div>
+    <button onclick="mensaje()">Abrir Sorpresa 🎁</button>
 
 </div>
 
 <script>
-
 function mensaje(){
+    alert(`💝💖💗 Helen 💝💖💗
 
-    alert(
-`Helen ❤️
+Gracias por ser mi amiga y por ayudarme en todo.
 
-Gracias por ser una persona increíble.
+Sabes que yo siempre estaré para ti en cualquier cosa, solo pídela.
 
-Espero que tengas un cumpleaños lleno de felicidad, risas y momentos hermosos.
-
-Nunca dejes de sonreír. 🎂✨`
-    );
-
+Recuerda que nunca estarás sola. 🎂✨`);
 }
 
-/* CONFETI */
-
 const colores=[
-"#ff4d6d",
-"#ffd166",
-"#06d6a0",
-"#118ab2",
-"#8338ec",
-"#ffffff"
+"#ff4d6d","#ffd166","#06d6a0","#118ab2","#8338ec","#ffffff"
 ];
 
 for(let i=0;i<100;i++){
-
     let c=document.createElement("div");
-
     c.classList.add("confeti");
-
     c.style.left=Math.random()*100+"vw";
-
-    c.style.background=
-    colores[Math.floor(Math.random()*colores.length)];
-
-    c.style.animationDuration=
-    (Math.random()*4+2)+"s";
-
+    c.style.background=colores[Math.floor(Math.random()*colores.length)];
+    c.style.animationDuration=(Math.random()*4+2)+"s";
     document.body.appendChild(c);
 }
 
-/* CORAZONES */
-
-for(let i=0;i<25;i++){
-
+for(let i=0;i<50;i++){
     let h=document.createElement("div");
-
     h.classList.add("flotante");
-
-    h.innerHTML="❤️";
-
+    h.innerHTML="🌹";
     h.style.left=Math.random()*100+"vw";
-
-    h.style.animationDuration=
-    (Math.random()*4+4)+"s";
-
-    h.style.fontSize=
-    (Math.random()*25+15)+"px";
-
+    h.style.animationDuration=(Math.random()*5+4)+"s";
+    h.style.fontSize=(Math.random()*30+20)+"px";
     document.body.appendChild(h);
 }
 
-/* FUEGOS ARTIFICIALES */
-
 for(let i=0;i<12;i++){
-
     let f=document.createElement("div");
-
     f.classList.add("firework");
-
     f.style.left=Math.random()*100+"vw";
-
     f.style.top=Math.random()*100+"vh";
-
-    f.style.animationDelay=
-    Math.random()*2+"s";
-
+    f.style.animationDelay=Math.random()*2+"s";
     document.body.appendChild(f);
 }
-
 </script>
 
 </body>
 </html>
-```
